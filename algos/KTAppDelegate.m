@@ -29,6 +29,8 @@
     NSString *string = @"Reverse me?";
     [self reverseString:[string mutableCopy]];
     
+    [self findNthFibonocci:28];
+    
 }
 
 -(void)selectionSort:(NSMutableArray*)arr{
@@ -74,6 +76,22 @@
         [reversedString appendString:[str substringWithRange:NSMakeRange(i-1, 1)]];
     }
     NSLog(@"%@", reversedString);
+}
+
+-(void)findNthFibonocci:(NSUInteger)nth{
+    NSUInteger previousFib = 0;
+    NSUInteger middleFib = 1;
+    NSUInteger nextFib = 1;
+    
+    for (NSUInteger i=0; i<nth; i++) {
+        NSUInteger tempNextFib = nextFib;
+        nextFib += middleFib;
+        NSUInteger tempMiddleFib = middleFib;
+        middleFib = tempNextFib;
+        previousFib = tempMiddleFib;
+    }
+    
+    NSLog(@"%luth fibonocci = %lu", (unsigned long)nth, (unsigned long)previousFib);
 }
 
 @end
