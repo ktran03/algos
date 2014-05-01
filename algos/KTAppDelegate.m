@@ -25,6 +25,10 @@
     [self insertionSort:arr];
     [self bubbleSort:arr];
     
+    
+    NSString *string = @"Reverse me?";
+    [self reverseString:[string mutableCopy]];
+    
 }
 
 -(void)selectionSort:(NSMutableArray*)arr{
@@ -62,6 +66,14 @@
         }
     }
     NSLog(@"bubble sort\n%@", arr);
+}
+
+-(void)reverseString:(NSMutableString*)str{
+    NSMutableString *reversedString = [[NSMutableString alloc] initWithCapacity:[str length]];
+    for (NSUInteger i=[str length]; i>0; i--) {
+        [reversedString appendString:[str substringWithRange:NSMakeRange(i-1, 1)]];
+    }
+    NSLog(@"%@", reversedString);
 }
 
 @end
