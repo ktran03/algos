@@ -30,6 +30,7 @@
     [self reverseString:[string mutableCopy]];
     
     [self findNthFibonocci:28];
+    NSLog(@"%lu", (unsigned long)[self fibRecursize:28]);
     
 }
 
@@ -92,6 +93,10 @@
     }
     
     NSLog(@"%luth fibonocci = %lu", (unsigned long)nth, (unsigned long)previousFib);
+}
+
+-(NSUInteger)fibRecursize:(NSUInteger)nth{
+    return nth <= 1 ? nth : ([self fibRecursize:nth-1] + [self fibRecursize:nth-2]);
 }
 
 @end
