@@ -32,6 +32,8 @@
     [self findNthFibonocci:28];
     NSLog(@"%lu", (unsigned long)[self fibRecursize:28]);
     
+    [self logTimeTable:12];
+    
 }
 
 -(void)selectionSort:(NSMutableArray*)arr{
@@ -97,6 +99,17 @@
 
 -(NSUInteger)fibRecursize:(NSUInteger)nth{
     return nth <= 1 ? nth : ([self fibRecursize:nth-1] + [self fibRecursize:nth-2]);
+}
+
+-(void)logTimeTable:(NSUInteger)val{
+    
+    for (int i=0; i<=val; i++) {
+        NSMutableString *line = [[NSMutableString alloc] init];
+        for (int e=0; e<=val; e++) {
+            [line appendString:[NSString stringWithFormat:@"%d ", (e+i)]];
+        }
+        NSLog(@"%@", line);
+    }
 }
 
 @end
