@@ -16,7 +16,7 @@
 {
     // Insert code here to initialize your application
     
-    NSMutableArray *arrayToSort = [[NSMutableArray alloc] initWithArray:@[@7,@49,@2,@100,@14,@522]];
+    NSMutableArray *arrayToSort = [[NSMutableArray alloc] initWithArray:@[@7,@49,@2,@100,@14,@522,@100,@111,@255,@32423,@123]];
     NSLog(@"Original Sequence\n%@", arrayToSort);
     
     [self mergeSort:arrayToSort left:0 right:([arrayToSort count])];
@@ -67,30 +67,37 @@
     NSUInteger r=0;
     
     for (i=leftStart; i<leftEnd; i++, l++) {
-        [leftHalf insertObject:[arr objectAtIndex:i] atIndex:l];
+        id obj = [arr objectAtIndex:i];
+        [leftHalf insertObject:obj atIndex:l];
     }
     
     for (i=rightStart; i<rightEnd; i++, r++) {
-        [rightHalf insertObject:[arr objectAtIndex:i] atIndex:r];
+        id obj = [arr objectAtIndex:i];
+        [rightHalf insertObject:obj atIndex:r];
     }
     
     for (i=leftStart, l=0, r=0; (l<leftLength && r<rightLength) ;i++) {
         
-        if ([[leftHalf objectAtIndex:l] intValue] < [[rightHalf objectAtIndex:r] intValue]) {
-            [arr replaceObjectAtIndex:i withObject:[leftHalf objectAtIndex:l]];
-            l++;
+        id leftValue = [leftHalf objectAtIndex:l];
+        id rightValue = [rightHalf objectAtIndex:r];
+        
+        if (rightValue < leftValue) {   //swap
+            [arr replaceObjectAtIndex:i withObject:rightValue];
+            r++;
         }
         else   {
-            [arr replaceObjectAtIndex:i withObject:[rightHalf objectAtIndex:r]];
-            r++;
+            [arr replaceObjectAtIndex:i withObject:leftValue];
+            l++;
         }
     }
     
     for ( ; l<leftLength; i++, l++) {
-        [arr replaceObjectAtIndex:i withObject:[leftHalf objectAtIndex:l]];
+        id remainingObj = [leftHalf objectAtIndex:l];
+        [arr replaceObjectAtIndex:i withObject:remainingObj];
     }
     for ( ; r<rightLength; i++, r++) {
-        [arr replaceObjectAtIndex:i withObject:[rightHalf objectAtIndex:r]];
+        id remainingObj = [leftHalf objectAtIndex:l];
+        [arr replaceObjectAtIndex:i withObject:remainingObj];
     }
     
 }
