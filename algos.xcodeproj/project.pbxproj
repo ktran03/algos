@@ -18,6 +18,14 @@
 		CF1D9B9F1911AB0D00DA594F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1D9B7E1911AB0D00DA594F /* Cocoa.framework */; };
 		CF1D9BA71911AB0D00DA594F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF1D9BA51911AB0D00DA594F /* InfoPlist.strings */; };
 		CF1D9BA91911AB0D00DA594F /* algosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BA81911AB0D00DA594F /* algosTests.m */; };
+		CF1D9BE61919448100DA594F /* KTMergeSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BE51919448100DA594F /* KTMergeSort.m */; };
+		CF1D9BE91919449200DA594F /* KTSelectionSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BE81919449200DA594F /* KTSelectionSort.m */; };
+		CF1D9BEC191944A000DA594F /* KTInsertionSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BEB191944A000DA594F /* KTInsertionSort.m */; };
+		CF1D9BEF191944AA00DA594F /* KTBubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BEE191944AA00DA594F /* KTBubbleSort.m */; };
+		CF1D9BF2191944BA00DA594F /* KTReverseString.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BF1191944BA00DA594F /* KTReverseString.m */; };
+		CF1D9BF5191944C500DA594F /* KTNthFibonocci.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BF4191944C500DA594F /* KTNthFibonocci.m */; };
+		CF1D9BF8191944CE00DA594F /* KTPrintTimeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BF7191944CE00DA594F /* KTPrintTimeTable.m */; };
+		CF1D9BFB1919453200DA594F /* KTNthFibonocciRecursive.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BFA1919453200DA594F /* KTNthFibonocciRecursive.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +58,22 @@
 		CF1D9BA41911AB0D00DA594F /* algosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "algosTests-Info.plist"; sourceTree = "<group>"; };
 		CF1D9BA61911AB0D00DA594F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF1D9BA81911AB0D00DA594F /* algosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = algosTests.m; sourceTree = "<group>"; };
+		CF1D9BE41919448100DA594F /* KTMergeSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTMergeSort.h; sourceTree = "<group>"; };
+		CF1D9BE51919448100DA594F /* KTMergeSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTMergeSort.m; sourceTree = "<group>"; };
+		CF1D9BE71919449200DA594F /* KTSelectionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTSelectionSort.h; sourceTree = "<group>"; };
+		CF1D9BE81919449200DA594F /* KTSelectionSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTSelectionSort.m; sourceTree = "<group>"; };
+		CF1D9BEA191944A000DA594F /* KTInsertionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTInsertionSort.h; sourceTree = "<group>"; };
+		CF1D9BEB191944A000DA594F /* KTInsertionSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTInsertionSort.m; sourceTree = "<group>"; };
+		CF1D9BED191944AA00DA594F /* KTBubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTBubbleSort.h; sourceTree = "<group>"; };
+		CF1D9BEE191944AA00DA594F /* KTBubbleSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTBubbleSort.m; sourceTree = "<group>"; };
+		CF1D9BF0191944BA00DA594F /* KTReverseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTReverseString.h; sourceTree = "<group>"; };
+		CF1D9BF1191944BA00DA594F /* KTReverseString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTReverseString.m; sourceTree = "<group>"; };
+		CF1D9BF3191944C500DA594F /* KTNthFibonocci.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTNthFibonocci.h; sourceTree = "<group>"; };
+		CF1D9BF4191944C500DA594F /* KTNthFibonocci.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTNthFibonocci.m; sourceTree = "<group>"; };
+		CF1D9BF6191944CE00DA594F /* KTPrintTimeTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTPrintTimeTable.h; sourceTree = "<group>"; };
+		CF1D9BF7191944CE00DA594F /* KTPrintTimeTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTPrintTimeTable.m; sourceTree = "<group>"; };
+		CF1D9BF91919453200DA594F /* KTNthFibonocciRecursive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTNthFibonocciRecursive.h; sourceTree = "<group>"; };
+		CF1D9BFA1919453200DA594F /* KTNthFibonocciRecursive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTNthFibonocciRecursive.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +144,22 @@
 				CF1D9B931911AB0D00DA594F /* MainMenu.xib */,
 				CF1D9B961911AB0D00DA594F /* Images.xcassets */,
 				CF1D9B851911AB0D00DA594F /* Supporting Files */,
+				CF1D9BE41919448100DA594F /* KTMergeSort.h */,
+				CF1D9BE51919448100DA594F /* KTMergeSort.m */,
+				CF1D9BE71919449200DA594F /* KTSelectionSort.h */,
+				CF1D9BE81919449200DA594F /* KTSelectionSort.m */,
+				CF1D9BEA191944A000DA594F /* KTInsertionSort.h */,
+				CF1D9BEB191944A000DA594F /* KTInsertionSort.m */,
+				CF1D9BED191944AA00DA594F /* KTBubbleSort.h */,
+				CF1D9BEE191944AA00DA594F /* KTBubbleSort.m */,
+				CF1D9BF0191944BA00DA594F /* KTReverseString.h */,
+				CF1D9BF1191944BA00DA594F /* KTReverseString.m */,
+				CF1D9BF3191944C500DA594F /* KTNthFibonocci.h */,
+				CF1D9BF4191944C500DA594F /* KTNthFibonocci.m */,
+				CF1D9BF91919453200DA594F /* KTNthFibonocciRecursive.h */,
+				CF1D9BFA1919453200DA594F /* KTNthFibonocciRecursive.m */,
+				CF1D9BF6191944CE00DA594F /* KTPrintTimeTable.h */,
+				CF1D9BF7191944CE00DA594F /* KTPrintTimeTable.m */,
 			);
 			path = algos;
 			sourceTree = "<group>";
@@ -253,8 +293,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1D9BF5191944C500DA594F /* KTNthFibonocci.m in Sources */,
+				CF1D9BEC191944A000DA594F /* KTInsertionSort.m in Sources */,
 				CF1D9B8B1911AB0D00DA594F /* main.m in Sources */,
+				CF1D9BF2191944BA00DA594F /* KTReverseString.m in Sources */,
+				CF1D9BF8191944CE00DA594F /* KTPrintTimeTable.m in Sources */,
+				CF1D9BEF191944AA00DA594F /* KTBubbleSort.m in Sources */,
+				CF1D9BE91919449200DA594F /* KTSelectionSort.m in Sources */,
+				CF1D9BFB1919453200DA594F /* KTNthFibonocciRecursive.m in Sources */,
 				CF1D9B921911AB0D00DA594F /* KTAppDelegate.m in Sources */,
+				CF1D9BE61919448100DA594F /* KTMergeSort.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +515,7 @@
 				CF1D9BAE1911AB0D00DA594F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF1D9BAF1911AB0D00DA594F /* Build configuration list for PBXNativeTarget "algosTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +524,7 @@
 				CF1D9BB11911AB0D00DA594F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
