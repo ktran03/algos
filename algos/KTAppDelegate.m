@@ -8,31 +8,89 @@
 
 #import "KTAppDelegate.h"
 
-@implementation KTAppDelegate
+@implementation KTAppDelegate{
+
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
     
-    NSUInteger capacity = 20;
-    NSMutableArray *arr = [[NSMutableArray alloc] initWithCapacity:capacity];
-    for (NSUInteger i=0; i<capacity; i++) {
-       [arr addObject:[NSNumber numberWithInt:rand() % capacity]];
+    NSMutableArray *arrayToSort = [[NSMutableArray alloc] initWithArray:@[@7,@49,@73,@2,@53,@100,@14,@522]];
+    NSLog(@"Original Sequence\n%@", arrayToSort);
+    
+    [self mergeSort:arrayToSort left:0 right:([arrayToSort count])];
+    NSLog(@"%@", arrayToSort);
+//
+//    [self selectionSort:arrayToSort];
+//    [self insertionSort:arrayToSort];
+//    [self bubbleSort:arrayToSort];
+//    
+//    NSString *string = @"Reverse me?";
+//    [self reverseString:[string mutableCopy]];
+//    
+//    [self findNthFibonocci:28];
+//    NSLog(@"%lu", (unsigned long)[self fibRecursize:28]);
+//    
+//    [self logTimeTable:12];
+    
+}
+
+-(void)mergeSort:(NSMutableArray*)arr left:(NSUInteger)left right:(NSUInteger)right{
+    
+    if (right-left<=1) {
+        return;
     }
 
-    NSLog(@"Original Sequence\n%@", arr);
-    [self selectionSort:arr];
-    [self insertionSort:arr];
-    [self bubbleSort:arr];
+    NSUInteger leftStart = left;
+    NSUInteger leftEnd = (left+right)/2;
+    NSUInteger rightStart = leftEnd;
+    NSUInteger rightEnd = right;
     
+    [self mergeSort:arr left:leftStart right:leftEnd];
+    [self mergeSort:arr left:rightStart right:rightEnd];
     
-    NSString *string = @"Reverse me?";
-    [self reverseString:[string mutableCopy]];
+    [self mergeSortMerge:arr leftStart:leftStart leftEnd:leftEnd rightStart:rightStart rightEnd:rightEnd];
+
+}
+
+-(void)mergeSortMerge:(NSMutableArray*)arr leftStart:(NSUInteger)leftStart leftEnd:(NSUInteger)leftEnd rightStart:(NSUInteger)rightStart rightEnd:(NSUInteger)rightEnd{
     
-    [self findNthFibonocci:28];
-    NSLog(@"%lu", (unsigned long)[self fibRecursize:28]);
+    NSUInteger leftLength = leftEnd - leftStart;
+    NSUInteger rightLength = rightEnd - rightStart;
     
-    [self logTimeTable:12];
+    NSMutableArray *leftHalf = [[NSMutableArray alloc] initWithCapacity:leftLength];
+    NSMutableArray *rightHalf = [[NSMutableArray alloc] initWithCapacity:rightLength];
+    
+    NSUInteger index=0;
+    NSUInteger leftIndex=0;
+    NSUInteger rightIndex=0;
+    
+    for (index=leftStart; index<leftEnd; index++, leftIndex++) {
+        [leftHalf insertObject:[arr objectAtIndex:index] atIndex:leftIndex];
+    }
+    
+    for (index=rightStart; index<rightEnd; index++, rightIndex++) {
+        [rightHalf insertObject:[arr objectAtIndex:index] atIndex:rightIndex];
+    }
+    
+    for (index=leftStart, leftIndex=0, rightIndex=0; leftIndex<leftLength && rightIndex<rightLength ;index++) {
+        if ([[leftHalf objectAtIndex:leftIndex] intValue] < [[rightHalf objectAtIndex:rightIndex] intValue]) {
+            [arr replaceObjectAtIndex:index withObject:[leftHalf objectAtIndex:leftIndex]];
+            leftIndex++;
+        }
+        else   {
+            [arr replaceObjectAtIndex:leftIndex withObject:[rightHalf objectAtIndex:rightIndex]];
+            rightIndex++;
+        }
+    }
+    
+    for ( ; leftIndex<leftLength; index++, leftIndex++) {
+        [arr replaceObjectAtIndex:index withObject:[leftHalf objectAtIndex:leftIndex]];
+    }
+    for ( ; rightIndex<rightLength; index++, rightIndex++) {
+        [arr replaceObjectAtIndex:index withObject:[rightHalf objectAtIndex:rightIndex]];
+    }
     
 }
 
