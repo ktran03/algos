@@ -16,7 +16,7 @@
 {
     // Insert code here to initialize your application
     
-    NSMutableArray *arrayToSort = [[NSMutableArray alloc] initWithArray:@[@7,@49,@73,@2,@53,@100,@14,@522]];
+    NSMutableArray *arrayToSort = [[NSMutableArray alloc] initWithArray:@[@7,@49,@2,@100,@14,@522]];
     NSLog(@"Original Sequence\n%@", arrayToSort);
     
     [self mergeSort:arrayToSort left:0 right:([arrayToSort count])];
@@ -62,34 +62,35 @@
     NSMutableArray *leftHalf = [[NSMutableArray alloc] initWithCapacity:leftLength];
     NSMutableArray *rightHalf = [[NSMutableArray alloc] initWithCapacity:rightLength];
     
-    NSUInteger index=0;
-    NSUInteger leftIndex=0;
-    NSUInteger rightIndex=0;
+    NSUInteger i=0;
+    NSUInteger l=0;
+    NSUInteger r=0;
     
-    for (index=leftStart; index<leftEnd; index++, leftIndex++) {
-        [leftHalf insertObject:[arr objectAtIndex:index] atIndex:leftIndex];
+    for (i=leftStart; i<leftEnd; i++, l++) {
+        [leftHalf insertObject:[arr objectAtIndex:i] atIndex:l];
     }
     
-    for (index=rightStart; index<rightEnd; index++, rightIndex++) {
-        [rightHalf insertObject:[arr objectAtIndex:index] atIndex:rightIndex];
+    for (i=rightStart; i<rightEnd; i++, r++) {
+        [rightHalf insertObject:[arr objectAtIndex:i] atIndex:r];
     }
     
-    for (index=leftStart, leftIndex=0, rightIndex=0; leftIndex<leftLength && rightIndex<rightLength ;index++) {
-        if ([[leftHalf objectAtIndex:leftIndex] intValue] < [[rightHalf objectAtIndex:rightIndex] intValue]) {
-            [arr replaceObjectAtIndex:index withObject:[leftHalf objectAtIndex:leftIndex]];
-            leftIndex++;
+    for (i=leftStart, l=0, r=0; (l<leftLength && r<rightLength) ;i++) {
+        
+        if ([[leftHalf objectAtIndex:l] intValue] < [[rightHalf objectAtIndex:r] intValue]) {
+            [arr replaceObjectAtIndex:i withObject:[leftHalf objectAtIndex:l]];
+            l++;
         }
         else   {
-            [arr replaceObjectAtIndex:leftIndex withObject:[rightHalf objectAtIndex:rightIndex]];
-            rightIndex++;
+            [arr replaceObjectAtIndex:i withObject:[rightHalf objectAtIndex:r]];
+            r++;
         }
     }
     
-    for ( ; leftIndex<leftLength; index++, leftIndex++) {
-        [arr replaceObjectAtIndex:index withObject:[leftHalf objectAtIndex:leftIndex]];
+    for ( ; l<leftLength; i++, l++) {
+        [arr replaceObjectAtIndex:i withObject:[leftHalf objectAtIndex:l]];
     }
-    for ( ; rightIndex<rightLength; index++, rightIndex++) {
-        [arr replaceObjectAtIndex:index withObject:[rightHalf objectAtIndex:rightIndex]];
+    for ( ; r<rightLength; i++, r++) {
+        [arr replaceObjectAtIndex:i withObject:[rightHalf objectAtIndex:r]];
     }
     
 }
