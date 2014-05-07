@@ -50,8 +50,8 @@
 		CF1D9B8A1911AB0D00DA594F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF1D9B8C1911AB0D00DA594F /* algos-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "algos-Prefix.pch"; sourceTree = "<group>"; };
 		CF1D9B8E1911AB0D00DA594F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		CF1D9B901911AB0D00DA594F /* KTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTAppDelegate.h; sourceTree = "<group>"; };
-		CF1D9B911911AB0D00DA594F /* KTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTAppDelegate.m; sourceTree = "<group>"; };
+		CF1D9B901911AB0D00DA594F /* KTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KTAppDelegate.h; path = algos/KTAppDelegate.h; sourceTree = "<group>"; };
+		CF1D9B911911AB0D00DA594F /* KTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KTAppDelegate.m; path = algos/KTAppDelegate.m; sourceTree = "<group>"; };
 		CF1D9B941911AB0D00DA594F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CF1D9B961911AB0D00DA594F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF1D9B9C1911AB0D00DA594F /* algosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = algosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,8 +103,11 @@
 		CF1D9B721911AB0D00DA594F = {
 			isa = PBXGroup;
 			children = (
+				CF1D9B901911AB0D00DA594F /* KTAppDelegate.h */,
+				CF1D9B911911AB0D00DA594F /* KTAppDelegate.m */,
 				CF1D9B841911AB0D00DA594F /* algos */,
 				CF1D9BA21911AB0D00DA594F /* algosTests */,
+				CF1D9B851911AB0D00DA594F /* Supporting Files */,
 				CF1D9B7D1911AB0D00DA594F /* Frameworks */,
 				CF1D9B7C1911AB0D00DA594F /* Products */,
 			);
@@ -142,29 +145,9 @@
 		CF1D9B841911AB0D00DA594F /* algos */ = {
 			isa = PBXGroup;
 			children = (
-				CF1D9B901911AB0D00DA594F /* KTAppDelegate.h */,
-				CF1D9B911911AB0D00DA594F /* KTAppDelegate.m */,
-				CF1D9B931911AB0D00DA594F /* MainMenu.xib */,
-				CF1D9B961911AB0D00DA594F /* Images.xcassets */,
-				CF1D9B851911AB0D00DA594F /* Supporting Files */,
-				CF1D9BE41919448100DA594F /* KTMergeSort.h */,
-				CF1D9BE51919448100DA594F /* KTMergeSort.m */,
-				CF1D9BE71919449200DA594F /* KTSelectionSort.h */,
-				CF1D9BE81919449200DA594F /* KTSelectionSort.m */,
-				CF1D9BEA191944A000DA594F /* KTInsertionSort.h */,
-				CF1D9BEB191944A000DA594F /* KTInsertionSort.m */,
-				CF1D9BED191944AA00DA594F /* KTBubbleSort.h */,
-				CF1D9BEE191944AA00DA594F /* KTBubbleSort.m */,
-				CF1D9BF0191944BA00DA594F /* KTReverseString.h */,
-				CF1D9BF1191944BA00DA594F /* KTReverseString.m */,
-				CF1D9BF3191944C500DA594F /* KTNthFibonocci.h */,
-				CF1D9BF4191944C500DA594F /* KTNthFibonocci.m */,
-				CF1D9BF91919453200DA594F /* KTNthFibonocciRecursive.h */,
-				CF1D9BFA1919453200DA594F /* KTNthFibonocciRecursive.m */,
-				CF1D9BF6191944CE00DA594F /* KTPrintTimeTable.h */,
-				CF1D9BF7191944CE00DA594F /* KTPrintTimeTable.m */,
-				CF1D9BFC1919E0F600DA594F /* KTQuickSort.h */,
-				CF1D9BFD1919E0F600DA594F /* KTQuickSort.m */,
+				CF1D9BFF191A86FE00DA594F /* Sorting */,
+				CF1D9C01191A872300DA594F /* Numbers & Mathematics */,
+				CF1D9C00191A871200DA594F /* String Manipulation */,
 			);
 			path = algos;
 			sourceTree = "<group>";
@@ -172,6 +155,8 @@
 		CF1D9B851911AB0D00DA594F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF1D9B931911AB0D00DA594F /* MainMenu.xib */,
+				CF1D9B961911AB0D00DA594F /* Images.xcassets */,
 				CF1D9B861911AB0D00DA594F /* algos-Info.plist */,
 				CF1D9B871911AB0D00DA594F /* InfoPlist.strings */,
 				CF1D9B8A1911AB0D00DA594F /* main.m */,
@@ -179,6 +164,7 @@
 				CF1D9B8D1911AB0D00DA594F /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			path = algos;
 			sourceTree = "<group>";
 		};
 		CF1D9BA21911AB0D00DA594F /* algosTests */ = {
@@ -197,6 +183,45 @@
 				CF1D9BA51911AB0D00DA594F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF1D9BFF191A86FE00DA594F /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D9BFC1919E0F600DA594F /* KTQuickSort.h */,
+				CF1D9BFD1919E0F600DA594F /* KTQuickSort.m */,
+				CF1D9BE41919448100DA594F /* KTMergeSort.h */,
+				CF1D9BE51919448100DA594F /* KTMergeSort.m */,
+				CF1D9BE71919449200DA594F /* KTSelectionSort.h */,
+				CF1D9BE81919449200DA594F /* KTSelectionSort.m */,
+				CF1D9BEA191944A000DA594F /* KTInsertionSort.h */,
+				CF1D9BEB191944A000DA594F /* KTInsertionSort.m */,
+				CF1D9BED191944AA00DA594F /* KTBubbleSort.h */,
+				CF1D9BEE191944AA00DA594F /* KTBubbleSort.m */,
+			);
+			name = Sorting;
+			sourceTree = "<group>";
+		};
+		CF1D9C00191A871200DA594F /* String Manipulation */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D9BF0191944BA00DA594F /* KTReverseString.h */,
+				CF1D9BF1191944BA00DA594F /* KTReverseString.m */,
+			);
+			name = "String Manipulation";
+			sourceTree = "<group>";
+		};
+		CF1D9C01191A872300DA594F /* Numbers & Mathematics */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D9BF3191944C500DA594F /* KTNthFibonocci.h */,
+				CF1D9BF4191944C500DA594F /* KTNthFibonocci.m */,
+				CF1D9BF91919453200DA594F /* KTNthFibonocciRecursive.h */,
+				CF1D9BFA1919453200DA594F /* KTNthFibonocciRecursive.m */,
+				CF1D9BF6191944CE00DA594F /* KTPrintTimeTable.h */,
+				CF1D9BF7191944CE00DA594F /* KTPrintTimeTable.m */,
+			);
+			name = "Numbers & Mathematics";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
