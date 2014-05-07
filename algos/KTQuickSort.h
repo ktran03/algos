@@ -10,4 +10,6 @@
 
 @interface KTQuickSort : NSObject
 
+-(void)quickSort:(NSMutableArray*)arr lowerBound:(NSUInteger)lowerBound upperBound:(NSUInteger)upperBound;
+
 @end
