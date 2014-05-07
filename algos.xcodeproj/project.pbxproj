@@ -26,6 +26,7 @@
 		CF1D9BF5191944C500DA594F /* KTNthFibonocci.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BF4191944C500DA594F /* KTNthFibonocci.m */; };
 		CF1D9BF8191944CE00DA594F /* KTPrintTimeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BF7191944CE00DA594F /* KTPrintTimeTable.m */; };
 		CF1D9BFB1919453200DA594F /* KTNthFibonocciRecursive.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BFA1919453200DA594F /* KTNthFibonocciRecursive.m */; };
+		CF1D9BFE1919E0F600DA594F /* KTQuickSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BFD1919E0F600DA594F /* KTQuickSort.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		CF1D9BF7191944CE00DA594F /* KTPrintTimeTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTPrintTimeTable.m; sourceTree = "<group>"; };
 		CF1D9BF91919453200DA594F /* KTNthFibonocciRecursive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTNthFibonocciRecursive.h; sourceTree = "<group>"; };
 		CF1D9BFA1919453200DA594F /* KTNthFibonocciRecursive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTNthFibonocciRecursive.m; sourceTree = "<group>"; };
+		CF1D9BFC1919E0F600DA594F /* KTQuickSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTQuickSort.h; sourceTree = "<group>"; };
+		CF1D9BFD1919E0F600DA594F /* KTQuickSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTQuickSort.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 				CF1D9BFA1919453200DA594F /* KTNthFibonocciRecursive.m */,
 				CF1D9BF6191944CE00DA594F /* KTPrintTimeTable.h */,
 				CF1D9BF7191944CE00DA594F /* KTPrintTimeTable.m */,
+				CF1D9BFC1919E0F600DA594F /* KTQuickSort.h */,
+				CF1D9BFD1919E0F600DA594F /* KTQuickSort.m */,
 			);
 			path = algos;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				CF1D9B8B1911AB0D00DA594F /* main.m in Sources */,
 				CF1D9BF2191944BA00DA594F /* KTReverseString.m in Sources */,
 				CF1D9BF8191944CE00DA594F /* KTPrintTimeTable.m in Sources */,
+				CF1D9BFE1919E0F600DA594F /* KTQuickSort.m in Sources */,
 				CF1D9BEF191944AA00DA594F /* KTBubbleSort.m in Sources */,
 				CF1D9BE91919449200DA594F /* KTSelectionSort.m in Sources */,
 				CF1D9BFB1919453200DA594F /* KTNthFibonocciRecursive.m in Sources */,
