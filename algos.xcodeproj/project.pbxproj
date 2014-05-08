@@ -27,6 +27,8 @@
 		CF1D9BF8191944CE00DA594F /* KTPrintTimeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BF7191944CE00DA594F /* KTPrintTimeTable.m */; };
 		CF1D9BFB1919453200DA594F /* KTNthFibonocciRecursive.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BFA1919453200DA594F /* KTNthFibonocciRecursive.m */; };
 		CF1D9BFE1919E0F600DA594F /* KTQuickSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BFD1919E0F600DA594F /* KTQuickSort.m */; };
+		CF1D9C05191ADA5C00DA594F /* KTHashTable.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9C04191ADA5C00DA594F /* KTHashTable.m */; };
+		CF1D9C08191ADB1400DA594F /* KTHashTableContainerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9C07191ADB1400DA594F /* KTHashTableContainerItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,10 @@
 		CF1D9BFA1919453200DA594F /* KTNthFibonocciRecursive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTNthFibonocciRecursive.m; sourceTree = "<group>"; };
 		CF1D9BFC1919E0F600DA594F /* KTQuickSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTQuickSort.h; sourceTree = "<group>"; };
 		CF1D9BFD1919E0F600DA594F /* KTQuickSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTQuickSort.m; sourceTree = "<group>"; };
+		CF1D9C03191ADA5C00DA594F /* KTHashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTHashTable.h; sourceTree = "<group>"; };
+		CF1D9C04191ADA5C00DA594F /* KTHashTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTHashTable.m; sourceTree = "<group>"; };
+		CF1D9C06191ADB1400DA594F /* KTHashTableContainerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTHashTableContainerItem.h; sourceTree = "<group>"; };
+		CF1D9C07191ADB1400DA594F /* KTHashTableContainerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTHashTableContainerItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +112,7 @@
 				CF1D9B901911AB0D00DA594F /* KTAppDelegate.h */,
 				CF1D9B911911AB0D00DA594F /* KTAppDelegate.m */,
 				CF1D9B841911AB0D00DA594F /* algos */,
-				CF1D9BA21911AB0D00DA594F /* algosTests */,
 				CF1D9B851911AB0D00DA594F /* Supporting Files */,
-				CF1D9B7D1911AB0D00DA594F /* Frameworks */,
-				CF1D9B7C1911AB0D00DA594F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +123,7 @@
 				CF1D9B9C1911AB0D00DA594F /* algosTests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		CF1D9B7D1911AB0D00DA594F /* Frameworks */ = {
@@ -130,6 +134,7 @@
 				CF1D9B801911AB0D00DA594F /* Other Frameworks */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		CF1D9B801911AB0D00DA594F /* Other Frameworks */ = {
@@ -145,6 +150,7 @@
 		CF1D9B841911AB0D00DA594F /* algos */ = {
 			isa = PBXGroup;
 			children = (
+				CF1D9C02191ADA4A00DA594F /* Hash */,
 				CF1D9BFF191A86FE00DA594F /* Sorting */,
 				CF1D9C01191A872300DA594F /* Numbers & Mathematics */,
 				CF1D9C00191A871200DA594F /* String Manipulation */,
@@ -155,6 +161,9 @@
 		CF1D9B851911AB0D00DA594F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF1D9BA21911AB0D00DA594F /* algosTests */,
+				CF1D9B7D1911AB0D00DA594F /* Frameworks */,
+				CF1D9B7C1911AB0D00DA594F /* Products */,
 				CF1D9B931911AB0D00DA594F /* MainMenu.xib */,
 				CF1D9B961911AB0D00DA594F /* Images.xcassets */,
 				CF1D9B861911AB0D00DA594F /* algos-Info.plist */,
@@ -174,7 +183,7 @@
 				CF1D9BA31911AB0D00DA594F /* Supporting Files */,
 			);
 			path = algosTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CF1D9BA31911AB0D00DA594F /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -222,6 +231,17 @@
 				CF1D9BF7191944CE00DA594F /* KTPrintTimeTable.m */,
 			);
 			name = "Numbers & Mathematics";
+			sourceTree = "<group>";
+		};
+		CF1D9C02191ADA4A00DA594F /* Hash */ = {
+			isa = PBXGroup;
+			children = (
+				CF1D9C03191ADA5C00DA594F /* KTHashTable.h */,
+				CF1D9C04191ADA5C00DA594F /* KTHashTable.m */,
+				CF1D9C06191ADB1400DA594F /* KTHashTableContainerItem.h */,
+				CF1D9C07191ADB1400DA594F /* KTHashTableContainerItem.m */,
+			);
+			name = Hash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,11 +346,13 @@
 				CF1D9BF5191944C500DA594F /* KTNthFibonocci.m in Sources */,
 				CF1D9BEC191944A000DA594F /* KTInsertionSort.m in Sources */,
 				CF1D9B8B1911AB0D00DA594F /* main.m in Sources */,
+				CF1D9C05191ADA5C00DA594F /* KTHashTable.m in Sources */,
 				CF1D9BF2191944BA00DA594F /* KTReverseString.m in Sources */,
 				CF1D9BF8191944CE00DA594F /* KTPrintTimeTable.m in Sources */,
 				CF1D9BFE1919E0F600DA594F /* KTQuickSort.m in Sources */,
 				CF1D9BEF191944AA00DA594F /* KTBubbleSort.m in Sources */,
 				CF1D9BE91919449200DA594F /* KTSelectionSort.m in Sources */,
+				CF1D9C08191ADB1400DA594F /* KTHashTableContainerItem.m in Sources */,
 				CF1D9BFB1919453200DA594F /* KTNthFibonocciRecursive.m in Sources */,
 				CF1D9B921911AB0D00DA594F /* KTAppDelegate.m in Sources */,
 				CF1D9BE61919448100DA594F /* KTMergeSort.m in Sources */,

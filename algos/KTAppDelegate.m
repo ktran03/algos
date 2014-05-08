@@ -16,6 +16,8 @@
 #import "KTNthFibonocci.h"
 #import "KTNthFibonocciRecursive.h"
 #import "KTPrintTimeTable.h"
+#import "KTHashTable.h"
+
 
 @implementation KTAppDelegate
 
@@ -23,8 +25,18 @@
 {
     // Insert code here to initialize your application
     
-    NSMutableArray *arrayToSort = [[NSMutableArray alloc] initWithArray:@[@7,@49,@2,@100,@14,@522,@100,@111,@255,@32423,@123]];
-    NSLog(@"Original Sequence\n%@", arrayToSort);
+
+    KTHashTable *hashTable = [KTHashTable new];
+    [hashTable insertValue:@"hello" forKey:@"hello-key"];
+    
+    
+//    NSMutableArray *arrayToSort = [[NSMutableArray alloc] initWithArray:@[@7,@49,@2]];
+//    NSLog(@"Original Sequence\n%@", arrayToSort);
+//    
+//    KTQuickSort *quickSortInstance = [KTQuickSort new];
+//    [quickSortInstance quickSort:arrayToSort lowerBound:0 upperBound:[arrayToSort count]-1];
+//    
+//    NSLog(@"%@", arrayToSort);
     
 
 //    KTBubbleSort *bubbleSortInstance = [KTBubbleSort new];
@@ -35,12 +47,6 @@
 //    
 //    KTInsertionSort *insertionSortInstance = [KTInsertionSort new];
 //    [insertionSortInstance insertionSort:arrayToSort];
-    
-    KTQuickSort *quickSortInstance = [KTQuickSort new];
-    [quickSortInstance quickSort:arrayToSort lowerBound:0 upperBound:[arrayToSort count]-1];
-    
-    
-    NSLog(@"%@", arrayToSort);
 
 //    KTMergeSort *mergeSortInstance = [KTMergeSort new];
 //    [mergeSortInstance mergeSort:arrayToSort left:0 right:([arrayToSort count])];
