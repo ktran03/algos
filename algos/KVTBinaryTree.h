@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "KVTBinaryNode.h"
 
 @interface KVTBinaryTree : NSObject
+
+@property(strong,nonatomic)KVTBinaryNode *root;
 
 @end

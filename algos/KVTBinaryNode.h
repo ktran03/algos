@@ -10,8 +10,9 @@
 
 @interface KVTBinaryNode : NSObject
 
-@property(strong,nonatomic)id item;
-@property(strong,nonatomic)KVTBinaryNode *parent;
+@property(strong,nonatomic)NSNumber *value;
+
+// Node's left and right children
 @property(strong,nonatomic)KVTBinaryNode *left;
 @property(strong,nonatomic)KVTBinaryNode *right;
 

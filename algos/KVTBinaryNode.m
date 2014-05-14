@@ -10,4 +10,20 @@
 
 @implementation KVTBinaryNode
 
+-(id) init
+{
+    [self setLeft:nil];
+    [self setRight:nil];
+    return self;
+}
+
+-(id) initWithValue:(NSNumber*)value
+{
+    [self setLeft:nil];
+    [self setRight:nil];
+    [self setValue:value];
+    
+    return self;
+}
+
 @end
