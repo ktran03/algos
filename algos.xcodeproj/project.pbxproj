@@ -29,6 +29,8 @@
 		CF1D9BFE1919E0F600DA594F /* KTQuickSort.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9BFD1919E0F600DA594F /* KTQuickSort.m */; };
 		CF1D9C05191ADA5C00DA594F /* KTHashTable.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9C04191ADA5C00DA594F /* KTHashTable.m */; };
 		CF1D9C08191ADB1400DA594F /* KTHashTableContainerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1D9C07191ADB1400DA594F /* KTHashTableContainerItem.m */; };
+		CFB119F51922F03B00B5CF33 /* KVTBinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB119F41922F03B00B5CF33 /* KVTBinaryTree.m */; };
+		CFB119F81922F05800B5CF33 /* KVTBinaryNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB119F71922F05800B5CF33 /* KVTBinaryNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,10 @@
 		CF1D9C04191ADA5C00DA594F /* KTHashTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTHashTable.m; sourceTree = "<group>"; };
 		CF1D9C06191ADB1400DA594F /* KTHashTableContainerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTHashTableContainerItem.h; sourceTree = "<group>"; };
 		CF1D9C07191ADB1400DA594F /* KTHashTableContainerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTHashTableContainerItem.m; sourceTree = "<group>"; };
+		CFB119F31922F03B00B5CF33 /* KVTBinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVTBinaryTree.h; sourceTree = "<group>"; };
+		CFB119F41922F03B00B5CF33 /* KVTBinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVTBinaryTree.m; sourceTree = "<group>"; };
+		CFB119F61922F05800B5CF33 /* KVTBinaryNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVTBinaryNode.h; sourceTree = "<group>"; };
+		CFB119F71922F05800B5CF33 /* KVTBinaryNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVTBinaryNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,7 @@
 		CF1D9B841911AB0D00DA594F /* algos */ = {
 			isa = PBXGroup;
 			children = (
+				CFB119F21922F02500B5CF33 /* Binary Search Tree */,
 				CF1D9C02191ADA4A00DA594F /* Hash */,
 				CF1D9BFF191A86FE00DA594F /* Sorting */,
 				CF1D9C01191A872300DA594F /* Numbers & Mathematics */,
@@ -242,6 +249,17 @@
 				CF1D9C07191ADB1400DA594F /* KTHashTableContainerItem.m */,
 			);
 			name = Hash;
+			sourceTree = "<group>";
+		};
+		CFB119F21922F02500B5CF33 /* Binary Search Tree */ = {
+			isa = PBXGroup;
+			children = (
+				CFB119F31922F03B00B5CF33 /* KVTBinaryTree.h */,
+				CFB119F41922F03B00B5CF33 /* KVTBinaryTree.m */,
+				CFB119F61922F05800B5CF33 /* KVTBinaryNode.h */,
+				CFB119F71922F05800B5CF33 /* KVTBinaryNode.m */,
+			);
+			name = "Binary Search Tree";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,8 +367,10 @@
 				CF1D9C05191ADA5C00DA594F /* KTHashTable.m in Sources */,
 				CF1D9BF2191944BA00DA594F /* KTReverseString.m in Sources */,
 				CF1D9BF8191944CE00DA594F /* KTPrintTimeTable.m in Sources */,
+				CFB119F51922F03B00B5CF33 /* KVTBinaryTree.m in Sources */,
 				CF1D9BFE1919E0F600DA594F /* KTQuickSort.m in Sources */,
 				CF1D9BEF191944AA00DA594F /* KTBubbleSort.m in Sources */,
+				CFB119F81922F05800B5CF33 /* KVTBinaryNode.m in Sources */,
 				CF1D9BE91919449200DA594F /* KTSelectionSort.m in Sources */,
 				CF1D9C08191ADB1400DA594F /* KTHashTableContainerItem.m in Sources */,
 				CF1D9BFB1919453200DA594F /* KTNthFibonocciRecursive.m in Sources */,
