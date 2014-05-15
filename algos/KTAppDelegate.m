@@ -17,19 +17,38 @@
 #import "KTNthFibonocciRecursive.h"
 #import "KTPrintTimeTable.h"
 #import "KTHashTable.h"
-
+#import "KVTRedBlackTree.h"
+#import "KVTRBNode.h"
 
 @implementation KTAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    
 
-    KTHashTable *hashTable = [KTHashTable new];
-    [hashTable insertValue:@"hello" forKey:@"hello-key"];
+    KVTRBNode *root = NULL;
+    KVTRedBlackTree *treeInstance = [KVTRedBlackTree new];
+
+    
+    root = [treeInstance addNumber:@13 rootNode:root];
+    root = [treeInstance addNumber:@8 rootNode:root];
+    root = [treeInstance addNumber:@17 rootNode:root];
+    root = [treeInstance addNumber:@1 rootNode:root];
+    root = [treeInstance addNumber:@11 rootNode:root];
+    root = [treeInstance addNumber:@15 rootNode:root];
+    root = [treeInstance addNumber:@25 rootNode:root];
+    root = [treeInstance addNumber:@6 rootNode:root];
+    root = [treeInstance addNumber:@22 rootNode:root];
+    root = [treeInstance addNumber:@27 rootNode:root];
+    
+    [treeInstance printTree:root depth:0];
     
     
+//
+//    KTHashTable *hashTable = [KTHashTable new];
+//    [hashTable insertValue:@"hello" forKey:@"hello-key"];
+//    
+//
 //    NSMutableArray *arrayToSort = [[NSMutableArray alloc] initWithArray:@[@7,@49,@2]];
 //    NSLog(@"Original Sequence\n%@", arrayToSort);
 //    

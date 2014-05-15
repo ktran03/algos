@@ -55,14 +55,4 @@
     return hash % self.tableCapacity;
 }
 
--(id)objectForKey:(NSString*)key{
-    int index = [self hashFunction:key];
-    
-    KTHashTableContainerItem *containerItem = self.containerItems[index];
-    
-//    while (containerItem) {
-//        
-//    }
-    return nil;
-}
 @end
