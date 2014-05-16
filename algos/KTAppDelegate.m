@@ -37,12 +37,23 @@
     root = [treeInstance addNumber:@25 rootNode:root];
     root = [treeInstance addNumber:@75 rootNode:root];
     root = [treeInstance addNumber:@5 rootNode:root];
+    
+    
     [treeInstance printTree:root depth:0];
+    
     [treeInstance breadthFirst:root];
     NSLog(@"\n");
-    [treeInstance depthFirstPreOrderRecursive:root];
-}
     
+    [treeInstance depthFirstPreOrderRecursive:root];
+    NSLog(@"\n");
+    
+    [treeInstance depthFirstInOrderRecursive:root];
+    NSLog(@"\n");
+
+    [treeInstance depthFirstPostOrderRecursive:root];
+    NSLog(@"\n");
+}
+
 
     
 @end

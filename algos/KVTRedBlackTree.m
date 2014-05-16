@@ -59,6 +59,34 @@
     [self depthFirstPreOrderRecursive:node.right];
 }
 
+/**
+ *  Depth first traversal, in order. (left, top, right)
+ *
+ *  @param node node
+ */
+-(void)depthFirstInOrderRecursive:(KVTRBNode*)node{
+    if (!node) {
+        return;
+    }
+    [self depthFirstInOrderRecursive:node.left];
+    [self visitNode:node];
+    [self depthFirstInOrderRecursive:node.right];
+}
+
+/**
+ *  Depth first traversal, post order. (left, right, top)
+ *
+ *  @param node node
+ */
+-(void)depthFirstPostOrderRecursive:(KVTRBNode*)node{
+    if (!node) {
+        return;
+    }
+    [self depthFirstInOrderRecursive:node.left];
+    [self depthFirstInOrderRecursive:node.right];
+    [self visitNode:node];
+}
+
 -(void)visitNode:(KVTRBNode*)node{
     NSLog(@"%@", node.value);
 }

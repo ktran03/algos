@@ -17,5 +17,7 @@
 -(KVTRBNode*)addNumber:(NSNumber*)value currentNode:(KVTRBNode*)currentNode parentNode:(KVTRBNode*)parentNode;
 -(void)breadthFirst:(KVTRBNode*)root;
 -(void)depthFirstPreOrderRecursive:(KVTRBNode*)node;
+-(void)depthFirstInOrderRecursive:(KVTRBNode*)node;
+-(void)depthFirstPostOrderRecursive:(KVTRBNode*)node;
 
 @end
