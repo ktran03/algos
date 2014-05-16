@@ -22,68 +22,25 @@
 
 @implementation KTAppDelegate
 
+
+
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
 
     KVTRBNode *root = NULL;
     KVTRedBlackTree *treeInstance = [KVTRedBlackTree new];
-
-    
-    root = [treeInstance addNumber:@13 rootNode:root];
-    root = [treeInstance addNumber:@8 rootNode:root];
-    root = [treeInstance addNumber:@17 rootNode:root];
+    root = [treeInstance addNumber:@50 rootNode:root];
+    root = [treeInstance addNumber:@100 rootNode:root];
     root = [treeInstance addNumber:@1 rootNode:root];
-    root = [treeInstance addNumber:@11 rootNode:root];
-    root = [treeInstance addNumber:@15 rootNode:root];
     root = [treeInstance addNumber:@25 rootNode:root];
-    root = [treeInstance addNumber:@6 rootNode:root];
-    root = [treeInstance addNumber:@22 rootNode:root];
-    root = [treeInstance addNumber:@27 rootNode:root];
-    
+    root = [treeInstance addNumber:@75 rootNode:root];
+    root = [treeInstance addNumber:@5 rootNode:root];
     [treeInstance printTree:root depth:0];
-    
-    
-//
-//    KTHashTable *hashTable = [KTHashTable new];
-//    [hashTable insertValue:@"hello" forKey:@"hello-key"];
-//    
-//
-//    NSMutableArray *arrayToSort = [[NSMutableArray alloc] initWithArray:@[@7,@49,@2]];
-//    NSLog(@"Original Sequence\n%@", arrayToSort);
-//    
-//    KTQuickSort *quickSortInstance = [KTQuickSort new];
-//    [quickSortInstance quickSort:arrayToSort lowerBound:0 upperBound:[arrayToSort count]-1];
-//    
-//    NSLog(@"%@", arrayToSort);
-    
-
-//    KTBubbleSort *bubbleSortInstance = [KTBubbleSort new];
-//    [bubbleSortInstance bubbleSort:arrayToSort];
-//
-//    KTSelectionSort *selectionSortInstance = [KTSelectionSort new];
-//    [selectionSortInstance selectionSort:arrayToSort];
-//    
-//    KTInsertionSort *insertionSortInstance = [KTInsertionSort new];
-//    [insertionSortInstance insertionSort:arrayToSort];
-
-//    KTMergeSort *mergeSortInstance = [KTMergeSort new];
-//    [mergeSortInstance mergeSort:arrayToSort left:0 right:([arrayToSort count])];
-//    NSLog(@"%@", arrayToSort);
-    
-//    NSString *string = @"Reverse me?";
-//    KTReverseString *reverseStringInstance = [KTReverseString new];
-//    [reverseStringInstance reverseString:[string mutableCopy]];
-//    
-//    KTNthFibonocci *nthFibInstance = [KTNthFibonocci new];
-//    [nthFibInstance findNthFibonocci:10];
-//    
-//    KTNthFibonocciRecursive *nthFibRecuInstance = [KTNthFibonocciRecursive new];
-//    [nthFibRecuInstance fibRecursize:10];
-//    
-//    KTPrintTimeTable *printTimeTableInstance = [KTPrintTimeTable new];
-//    [printTimeTableInstance logTimeTable:12];
-    
+    [treeInstance breadthFirst:root];
 }
+    
 
+    
 @end

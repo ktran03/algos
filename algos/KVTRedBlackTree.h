@@ -14,5 +14,7 @@
 -(KVTRBNode*)addNumber:(NSNumber*)value rootNode:(KVTRBNode*)root;
 
 -(void)printTree:(KVTRBNode*)node depth:(NSUInteger)depth;
+-(KVTRBNode*)addNumber:(NSNumber*)value currentNode:(KVTRBNode*)currentNode parentNode:(KVTRBNode*)parentNode;
+-(void)breadthFirst:(KVTRBNode*)root;
 
 @end

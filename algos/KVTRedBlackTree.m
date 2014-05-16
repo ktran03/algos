@@ -11,13 +11,43 @@
 /**
  *
  1. A node is either red or black.
- 2. The root is black. (This rule is sometimes omitted. Since the root can always be changed from red to black, but not necessarily vice-versa, this rule has little effect on analysis.)
- 3. All leaves (NIL) are black. (All leaves are same color as the root.)
+ 2. The root is black.
+ 3. All leaves (NIL) are black.
  4. Every red node must have two black child nodes.
  5. Every path from a given node to any of its descendant leaves contains the same number of black nodes.
  */
 
 @implementation KVTRedBlackTree
+
+#pragma marks - tree traversal methods
+/**
+ *  Breadth first traversal
+ *
+ *  @param root node
+ */
+-(void)breadthFirst:(KVTRBNode*)root{
+    NSMutableArray *queue = [NSMutableArray new];
+    [queue addObject:root];
+    
+    while ([queue count] > 0) {
+        
+        KVTRBNode *node = [queue firstObject];
+        [queue removeObjectAtIndex:0];
+        
+        [self visitNode:node];
+        
+        if (node.left) {
+            [queue addObject:node.left];
+        }
+        if (node.right) {
+            [queue addObject:node.right];
+        }
+    }
+}
+
+-(void)visitNode:(KVTRBNode*)node{
+    NSLog(@"%@", node.value);
+}
 
 #pragma marks - tree print methods
 /**
@@ -48,7 +78,7 @@
     // Prints out a long branch
     NSMutableString *str = [NSMutableString new];
     for(i = 0; i < depth; i++){
-        [str appendString:@"~~~~~"];
+        [str appendString:@"-"];
     }
     // After the branch is printed, display the info
     NSLog(@"%@<%@[%@]\n", str, node.value, node.color);
@@ -69,6 +99,14 @@
     }
 }
 
+/**
+ *  Extern use, add number given root of tree
+ *
+ *  @param value number
+ *  @param root  root
+ *
+ *  @return node
+ */
 -(KVTRBNode*)addNumber:(NSNumber*)value rootNode:(KVTRBNode*)root{
     return [self addNumber:value currentNode:root parentNode:nil];
 }
@@ -207,20 +245,26 @@
  */
 -(void)insertCase5:(KVTRBNode*)currentNode{
     KVTRBNode *parent = currentNode.parent;
-    KVTRBNode *grandParent = currentNode.parent.parent;
     
-    parent.color = @"black";
-    grandParent.color = @"red";
     if (currentNode == parent.left) {
-        [self rightRotation:grandParent];
+        [self rightRotation:parent];
+        currentNode.color = @"black";
+        currentNode.right.color = @"red";
     }
     else{
-        [self leftRotation:grandParent];
+        [self leftRotation:parent];
+        currentNode.color = @"black";
+        currentNode.left.color = @"red";
     }
 }
 
 #pragma marks - Rotation methods
 
+/**
+ *  Left rotation
+ *
+ *  @param currentNode node
+ */
 -(void)leftRotation:(KVTRBNode*)currentNode{
     KVTRBNode *parent = currentNode.parent;
     KVTRBNode *currentNodeCopy = currentNode;
@@ -241,6 +285,11 @@
     }
 }
 
+/**
+ *  Right rotation
+ *
+ *  @param currentNode node
+ */
 -(void)rightRotation:(KVTRBNode*)currentNode{
     KVTRBNode *parent = currentNode.parent;
     KVTRBNode *currentCopy = currentNode;
