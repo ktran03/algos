@@ -45,6 +45,20 @@
     }
 }
 
+/**
+ *  Depth first traversal, pre order. (top, left, right)
+ *
+ *  @param node node
+ */
+-(void)depthFirstPreOrderRecursive:(KVTRBNode*)node{
+    if (!node) {
+        return;
+    }
+    [self visitNode:node];
+    [self depthFirstPreOrderRecursive:node.left];
+    [self depthFirstPreOrderRecursive:node.right];
+}
+
 -(void)visitNode:(KVTRBNode*)node{
     NSLog(@"%@", node.value);
 }

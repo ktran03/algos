@@ -39,6 +39,8 @@
     root = [treeInstance addNumber:@5 rootNode:root];
     [treeInstance printTree:root depth:0];
     [treeInstance breadthFirst:root];
+    NSLog(@"\n");
+    [treeInstance depthFirstPreOrderRecursive:root];
 }
     
 
